@@ -52,15 +52,12 @@
             name: name,
           },
           theme: {
-            color: '#528FF0'
+            color: '#3d0951'
           },
           handler: function (transaction, response){
-              console.log(transaction)
-              console.log(transaction.razorpay_payment_id)
               var trans_id = transaction.razorpay_payment_id;
             //   var trans_id = 'pay_JmVG2BN2GeQCaZ';
               var url = "https://api.razorpay.com/v1/payments/{"+trans_id+"}";
-              console.log(url);
              
               var settings = {
                 "url": url,
@@ -74,33 +71,23 @@
               };
               
               $.ajax(settings).done(function (response) {
-                console.log(response);
               });
 
-              
-              var icon = 'error';
-                  var message = 'Payment Failed!';
-                  alertMessage(icon, message);
-
-                // var icon = 'success';
-                // var message = 'Payment Successfull';
-                // alertMessage(icon, message);
+              var icon = 'success';
+              var message = 'Payment Successfull';
+              alertMessage(icon, message);
   
               if(trans_id){
                 document.getElementById("trans_id").innerHTML = " "+trans_id+" ";
                 document.getElementById("amountPaying").innerHTML = " "+amount/100+" ₹";
                 document.getElementById("holder").innerHTML = merchangeName;
-
                 document.getElementById("inputd").style.display = "none";
                 document.getElementById("outputd").style.display = "block";
               }else{
-                  console.log("not successfull");
                   var icon = 'error';
                   var message = 'Payment Failed!';
                   alertMessage(icon, message);
-
               }
-            // pay_JlJbUnDExxkBA7
           }
         };
       function alertMessage(icon, message){
@@ -112,14 +99,11 @@
           })
       }
     
-        window.rzpay = new Razorpay(options);
-    
-        console.log('Item Id: ', amount);
-        console.log('Amount: ', amount);
-        console.log('Quantity: ', qty);
-        console.log('Processor Id: ', processorId);
-        
-    
+      window.rzpay = new Razorpay(options);
+        // console.log('Item Id: ', amount);
+        // console.log('Amount: ', amount);
+        // console.log('Quantity: ', qty);
+        // console.log('Processor Id: ', processorId);
         rzpay.open();
       });
     }
