@@ -72,7 +72,7 @@ body {
  * ## links - (_document-setup.scss)
  * ------------------------------------------------------------------- */
 a {
-  color: #ec008c;
+  color: #378d7d;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -80,7 +80,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #0087cc;
+  color: #fbc674;
 }
 
 a:hover,
@@ -1155,7 +1155,7 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100%;
   opacity: .6;
-  background: linear-gradient(to right, #000000 0%, #299da3 0%, #1a1a1a 100%);
+  background: linear-gradient(to right, #000000 0%, #9b0072 0%, #000f9b 100%);
 }
 
 .info-is-visible .s-home {
@@ -1246,7 +1246,7 @@ input::-moz-focus-inner {
 .home-content h3::before {
   content: "";
   display: block;
-  background-color: rgba(236, 0, 140, 0.6);
+  background-color: rgb(54 201 165);
   width: 40px;
   height: 1px;
   position: absolute;
@@ -1327,7 +1327,7 @@ input::-moz-focus-inner {
   display: inline-block;
   font-family: "metropolis-regular", sans-serif;
   letter-spacing: 0;
-  background-color: #ec008c;
+  background-color: #378d7d;
   color: #FFFFFF;
   padding: 9px 12px;
   bottom: 1.3em;
@@ -1396,7 +1396,7 @@ input::-moz-focus-inner {
 
 .home-social span {
   font-size: 1.2rem;
-  color: #ec008c;
+  color: rgb(54 201 165);
   right: 6rem;
   opacity: 0;
   visibility: hidden;
@@ -1835,7 +1835,7 @@ html.no-csstransitions .home-content__main {
   content: "";
   width: 80px;
   height: 1px;
-  background-color: rgba(236, 0, 140, 0.6);
+  background-color: #00d5ae;
   position: absolute;
   left: 3px;
   top: -3.6rem;
@@ -1845,7 +1845,7 @@ html.no-csstransitions .home-content__main {
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.4rem;
   line-height: 1.286;
-  color: #ec008c;
+  color: #00d5ae;
 }
 
 .info-wrapper {
@@ -1983,7 +1983,7 @@ html.no-csstransitions .home-content__main {
   top: 50%;
   right: auto;
   bottom: auto;
-  background-color: #ec008c;
+  background-color: #378d7d;
   -webkit-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
@@ -2020,7 +2020,7 @@ html.no-csstransitions .home-content__main {
 
 .info-is-visible .info-menu-icon::before,
 .info-is-visible .info-menu-icon::after {
-  background-color: #ec008c;
+  background-color: #378d7d;
   -webkit-transition-delay: 0s, 0.2s;
   transition-delay: 0s, 0.2s;
 }
@@ -2157,7 +2157,7 @@ html.no-csstransitions .home-content__main {
   display: flex;
 }
 .outputarea{
-  display: flex;
+  display: block;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -2203,9 +2203,12 @@ html.no-csstransitions .home-content__main {
   justify-content: center;
 }
 .holderArea{
-  text-align: center;
-  margin-left: 40px;
+  margin-left: 0px;
 }
+#amountPaying {
+  font-size: 17px;
+  font-weight: bold;
+} 
 #holder{
   font-family: "metropolis-medium", sans-serif;
   font-size: 1.4rem;
@@ -2215,6 +2218,7 @@ html.no-csstransitions .home-content__main {
   margin-top: 0;
   margin-right: 0px;
   margin-bottom: 5rem;  
+  text-transform: capitalize;
 }
 .holderArea .payattend{
   letter-spacing: .3rem;
@@ -2229,7 +2233,7 @@ html.no-csstransitions .home-content__main {
   margin-bottom: 2rem;
 }
 .holderArea .hinttext{
-  color: rgb(255 48 169);
+  color: rgb(33 245 193);
   font-size: 14px;
   margin-top: -2rem;
   margin-bottom: 2rem;
@@ -2409,4 +2413,23 @@ html.no-csstransitions .home-content__main {
     font-weight: bold;
   }
 
+}
+
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  background: rgb(75 253 255 / 40%) !important;
+}
+.swal2-container.swal2-center>.swal2-popup {
+  color: #fff;
+  background: linear-gradient(to right, #000000 0%, #299da3 0%, #1a1a1a 100%);
+}
+.swal2-icon .swal2-success-circular-line-left{
+  background: transparent;
+}
+
+.swal2-icon .swal2-success-fix{
+  background: transparent;
+}
+
+.swal2-icon .swal2-success-circular-line-right{
+  background: transparent;
 }
