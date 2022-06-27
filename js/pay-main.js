@@ -52,7 +52,7 @@
             name: name,
           },
           theme: {
-            color: '#3d0951'
+            color: 'linear-gradient(to right, #000000 0%, #ff00bc 0%, #3ac7c3 100%)'
           },
           handler: function (transaction, response){
               var trans_id = transaction.razorpay_payment_id;
