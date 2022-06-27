@@ -41,7 +41,7 @@
           
       loadExternalScript('https://checkout.razorpay.com/v1/checkout.js').then(function() { 
         var options = {
-          key: 'rzp_test_ipn3AgG0RwWCL2',
+          key: 'rzp_test_nJScr06pajaP7k',
           protocol: 'https',
           hostname: 'api.razorpay.com',
           amount: amount,

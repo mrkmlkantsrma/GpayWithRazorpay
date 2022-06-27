@@ -2282,6 +2282,7 @@ html.no-csstransitions .home-content__main {
     padding-left: 0;
     margin-bottom: 25px;
     font-size: 1.3rem;
+    line-height: 1.7;
   }
   .home-logo img {
     width: 150px;
