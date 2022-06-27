@@ -58,19 +58,26 @@
               console.log(transaction)
               console.log(transaction.razorpay_payment_id)
               var trans_id = transaction.razorpay_payment_id;
+            //   var trans_id = 'pay_JmVG2BN2GeQCaZ';
+              var url = "https://api.razorpay.com/v1/payments/{"+trans_id+"}";
+              console.log(url);
              
-              // var settings = {
-              //     "url": "https://api.razorpay.com/v1/payments/"+trans_id,
-              //     "method": "GET",
-              //     "timeout": 0,
-              //     "headers": {
-              //         "Authorization": "Basic Og=="
-              //     },
-              //     };
-  
-              //     $.ajax(settings).done(function (response) {
-              //     console.log("response = "+response);
-              //     });
+              var settings = {
+                "url": url,
+                "method": "GET",
+                "timeout": 0,
+                "headers": {
+                  "key_id": "rzp_test_nJScr06pajaP7k",
+                  "key_secret": "LLGZ6LbqBLejIoOuWGeKLhXu",
+                  "Authorization": "Basic Og=="
+                },
+              };
+              
+              $.ajax(settings).done(function (response) {
+                console.log(response);
+              });
+
+              
                 var icon = 'success';
                 var message = 'Payment Successfull';
                 alertMessage(icon, message);
@@ -103,6 +110,7 @@
         console.log('Amount: ', amount);
         console.log('Quantity: ', qty);
         console.log('Processor Id: ', processorId);
+        
     
         rzpay.open();
       });
