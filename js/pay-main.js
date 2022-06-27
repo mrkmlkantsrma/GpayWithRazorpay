@@ -78,9 +78,13 @@
               });
 
               
-                var icon = 'success';
-                var message = 'Payment Successfull';
-                alertMessage(icon, message);
+              var icon = 'error';
+                  var message = 'Payment Failed!';
+                  alertMessage(icon, message);
+
+                // var icon = 'success';
+                // var message = 'Payment Successfull';
+                // alertMessage(icon, message);
   
               if(trans_id){
                 document.getElementById("trans_id").innerHTML = " "+trans_id+" ";
@@ -91,6 +95,10 @@
                 document.getElementById("outputd").style.display = "block";
               }else{
                   console.log("not successfull");
+                  var icon = 'error';
+                  var message = 'Payment Failed!';
+                  alertMessage(icon, message);
+
               }
             // pay_JlJbUnDExxkBA7
           }
